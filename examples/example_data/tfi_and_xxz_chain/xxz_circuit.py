@@ -58,7 +58,7 @@ for d in range(depth):
         circuit.append(
             gate('XX', wires=[qubits[-1], qubits[0]],
                  param=symbol_names[d + depth]))
-    for q1, q2 in odd_qubits:
+    for q1, q2 in even_qubits:
         circuit.append(
             gate('ZZ', wires=[q1, q2], param=symbol_names[d + 2 * depth]))
         circuit.append(
